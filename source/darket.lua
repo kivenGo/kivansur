@@ -11808,7 +11808,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' Exp DarKet', url = 't.me/DGGEO'}, 
+{text = ' Exp DarKet', url = 't.me/R125R'}, 
 },
 }
 }
@@ -15223,7 +15223,7 @@ local T =[[
 – – – – – – – –
 ٠ DEV >> [˹ S𝑡𝑒Pℎ𝑒N .](t.me/R2RR7)
 – – – – – – – – 
-٠ Exp >> [˹ Exp DarKet .](t.me/DGGEO)
+٠ Exp >> [˹ Exp DarKet .](t.me/R125R)
 – – – – – – – – 
 ٠ـــ٠ >> [˹ TeAm DarKet .](t.me/R125R)
 – – – – – – – – 
