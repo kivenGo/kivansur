@@ -917,7 +917,7 @@ data = {
 },
 }
 }
-send(msg.chat_id,msg.id,"٠ مرحبا عزيزي في مصنع الحمايه المجاني لسورس داركت \n٠ مبرمج السورس @Q0OO0","html",true, false, false, true, reply_markup)
+send(msg.chat_id,msg.id,"٠ مرحبا عزيزي في مصنع الحمايه المجاني لسورس داركت \n٠ مبرمج السورس @R2RR7","html",true, false, false, true, reply_markup)
 return false 
 end
 ---making user
@@ -1005,7 +1005,7 @@ local TestText = "S𝑡𝑒Pℎ𝑒N\n— — — — — — — — —\n ٠*�
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = 'S𝑡𝑒Pℎ𝑒N', url = "https://t.me/Q0OO0"}
+{text = 'S𝑡𝑒Pℎ𝑒N', url = "https://t.me/R125R"}
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -1015,10 +1015,10 @@ local TestText = "- معلومات مبرمج السورس : \\nn: name Dev . ["
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = 'S𝑡𝑒Pℎ𝑒N', url = "https://t.me/Q0OO0"}
+{text = 'S𝑡𝑒Pℎ𝑒N', url = "https://t.me/R2RR7"}
 },
 {
-{text = 'TeAm DarKet', url = "https://t.me/IIIIIIQ"},
+{text = 'TeAm ', url = "https://t.me/R2RR7"},
 },
 }
 local msg_id = msg.id/2097152/0.5 
@@ -1028,16 +1028,16 @@ end
 end
 
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
-photo = "https://t.me/photojack14366/58"
+photo = "https://t.me/QQQLO/26"
 local T =[[
 ٠– – – – – – – –
  ٠ TeAm DarKet ٠
 ٠– – – – – – – –
-٠ DEV >> [˹ S𝑡𝑒Pℎ𝑒N .](t.me/Q0OO0)
+٠ DEV >> [˹ S𝑡𝑒Pℎ𝑒N .](t.me/R2RR7)
 ٠– – – – – – – – 
-٠ Exp >> [˹ Exp DarKet .](t.me/DGGEO)
+٠ Exp >> [˹ Exp  .](t.me/R2RR7)
 ٠– – – – – – – – 
-٠ـــ٠ >> [˹ TeAm DarKet .](t.me/IIIIIIQ)
+٠ـــ٠ >> [˹ TeAm  .](t.me/R125R)
 ٠– – – – – – – –
 ]]
 keyboard = {} 
