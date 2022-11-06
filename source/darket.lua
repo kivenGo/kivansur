@@ -734,19 +734,19 @@ end
 function Total_message(Message)  
 local MsgText = ''  
 if tonumber(Message) < 100 then 
-MsgText = 'انت مش بتتفاعل لي ؟'
+MsgText = 'انت ليش ما متفاعل ؟'
 elseif tonumber(Message) < 200 then 
-MsgText = 'متشد شويه في التفاعل'
+MsgText = 'م تشد بل التفاعل'
 elseif tonumber(Message) < 400 then 
-MsgText = 'انتي مكسوفه تتكلمي يبطه 🙈'
+MsgText = 'انتي تسحين تتحجين يبطه 🙈'
 elseif tonumber(Message) < 700 then 
-MsgText = 'في احسن من كدا هه'
+MsgText = 'اكو احلى من هيجيي هه'
 elseif tonumber(Message) < 1200 then 
-MsgText = 'انا عاوزك تولعها 😂🔥'
+MsgText = 'انا اريدك تولعها 😂🔥'
 elseif tonumber(Message) < 2000 then 
 MsgText = 'انت متفاعل يبن عمي'
 elseif tonumber(Message) < 3500 then 
-MsgText = 'بحبك اتفاعل كمان بقا 🥺♥'
+MsgText = 'اتفاعل بعد احبك 🥺♥'
 elseif tonumber(Message) < 4000 then 
 MsgText = 'استمر يبن عمي 😂🔥'
 elseif tonumber(Message) < 4500 then 
